@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph Generator</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Graph Generator</h1>
+    </header>
+    <main>
+        <div class="panel" id="user-controls">
+            <h2>User Controls</h2>
+            <button id="create-node">Create Single Vertex</button>
+            <button id="create-connection">Create Single Edge</button>
+            <button id="ensure-connected">Ensure Connected</button>
+            <button id="ensure-complete">Ensure Complete</button>
+        </div>
+        <div class="panel" id="random-generation">
+            <h2>Random Generation</h2>
+            <h6>Graph Size</h6>
+            <select name="graphsize" id="graph-size">
+                <option value="0">Tiny</option>
+                <option value="1">Small</option>
+                <option value="2">Medium</option>
+                <option value="3">Large</option>
+                <option value="4">XLarge</option>
+            </select>
+            <button id="generate-random">Generate Random Graph</button>
+        </div>
+        <div class="panel" id="reset-stats">
+            <h2>Reset and Stats</h2>
+            <button id="clear-canvas">Clear Graph</button>
+            <button id="see-stats">Show Graph Stats</button>
+            <button id="download">Download Graph</button>
+        </div>
+        <div hidden id="graph-stats" class="stats">
+            <p id="nodes">Number of nodes: 0</p>
+            <p id="num-connections">Number of connections: 0</p>
+            <p id="connections">Connections: {}</p>
+        </div>
+        <canvas id="canvas"></canvas>
+    </main>
+    <script type="module" src="./js/consts.js"></script>
+    <script type="module" src="./js/random.js"></script>
+    <script type="module" src="./js/node.js"></script>
+    <script type="module" src="./js/canvas.js"></script>
+    <script type="module" src="./js/connection.js"></script>
+    <script type="module" src="./js/graph.js"></script>
+    <script type="module" src="./js/uihandler.js"></script>
+    <script type="module" src="./js/downloadgraph.js"></script>
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>
