@@ -1,6 +1,7 @@
 import { Graph } from "./graph.js";
 import { HandleUI } from "./uihandler.js";
 import { DownloadGraph } from "./downloadgraph.js";
+import { TINY } from "./consts.js";
 
 window.onload = () => {
     const graph = new Graph();
@@ -37,6 +38,9 @@ window.onload = () => {
                 graph.generateRandomGraph(TINY);
             }
             graph.ensureConnectedGraph();
+        },
+        "see-stats": () => {
+            uiHandler.toggleStats();
         },
         "download": () => {
             const downloader = new DownloadGraph();

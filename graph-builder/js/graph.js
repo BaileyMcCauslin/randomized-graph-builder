@@ -93,7 +93,7 @@ export class Graph {
     // Ensure the the graph is connected by adding to it's subtree
     ensureConnectedGraph() {
         const totalNodeCount = this.getTotalNodes();
-        if(totalNodeCount >= MIN_NODES) {
+        if(totalNodeCount >= Constants.MIN_NODES) {
             for(let nodeIndex = 0; nodeIndex < totalNodeCount; nodeIndex++) {
                 // Check if the current node is part of connected subgraph
                 if(this.isPartOfConnectedSubgraph(nodeIndex)) {
@@ -147,7 +147,7 @@ export class Graph {
 
     // Return the desired graph size
     getGraphSize(graphSize) {
-        return GRAPH_SIZE[graphSize];
+        return Constants.GRAPH_SIZE[graphSize];
     }
 
     // Get the possible connections for a node(ones that its not connected to)
